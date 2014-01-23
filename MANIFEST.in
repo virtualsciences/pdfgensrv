@@ -1,0 +1,3 @@
+recursive-include pdfgensrv *
+recursive-include etc *
+global-exclude *pyc
