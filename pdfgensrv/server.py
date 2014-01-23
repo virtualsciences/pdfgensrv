@@ -31,7 +31,7 @@ def create_pdf(wk_path, url, cookies):
     args = [wk_path, url]
     for k, v in cookies.items():
         args.extend(['--cookie', k, v])
-    args.extend(['--disable-javascript', '--load-error-handling', 'ignore'])
+    args.extend(['--disable-javascript', '--ignore-load-errors', 'ignore'])
     args.append(pdf_path)
     p = subprocess.Popen(args)
     p.wait()
